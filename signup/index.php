@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <!--
+add php here 
+    first check if session is available
+        if session available,then redirect to homepage
+        else start session and a random key here
+        put the key to js input
+    done let ajax handle the rest
+    -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="src/main.css" />
+    </head>
+    <body>
+        <div width="100%" align="center">
+            <div class="carrier">
+                <div class="opt">
+                    <a class="lin" href="#" align="center">
+                        Sign up
+                    </a>
+                    <a class="sup" href="../login">
+                        Log in
+                    </a>
+                    <div class="lll"></div>
+                    <div class="llp"></div>
+                </div>
+                <div class="loginform">
+                    <div class="ar"></div>
+                    <div class="ar"></div>
+                    <div class="ar"></div>
+                    <input class="inps" id="uname" type="text" placeholder="Username" />
+                    <div class="ar"></div>
+                    <input class="inps" id="email" type="email" placeholder="Your email" />
+                    <div class="ar"></div>
+                    <input class="inps" id="pass" type="password" placeholder="Set password" />
+                    <div class="ar"></div>
+                    <input class="inps" id="vpass" type="password" placeholder="Reenter password" />
+                    <div class="ar"></div>
+                    <div class="cppt">
+                        <label class="container">I agree to the terms and policy
+                            <input type="checkbox" id="terms">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="ar"></div>
+                    <div class="ar"></div>
+                    <div class="crr">
+                        <button class="cncl">Cancel</button>
+                        <button class="cnt">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+    </body>
+</html>
