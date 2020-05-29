@@ -3,10 +3,22 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="src/main.css" />
+        <link rel="stylesheet" href="src/main.css">
+        <link rel="stylesheet" href="../src/modal.css">
+        <style type="text/css">
+            
+        </style>
     </head>
     <body>
-        <div width="100%" align="center">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="yyhuj">&times;</span>
+                <div id="modalText"></div>
+            </div>
+        </div>
+        <div align="center">
             <div class="carrier">
                 <div class="opt">
                     <a class="lin" href="#" align="center">
@@ -22,31 +34,55 @@
                     <div class="ar"></div>
                     <div class="ar"></div>
                     <div class="ar"></div>
-                    <input class="inps" id="uname" type="text" placeholder="Username" />
+                    <input class="inps" id="uname" type="text" placeholder="Username / Email" />
                     <div class="ar"></div>
-                    <input class="inps" id="email" type="email" placeholder="Your email" />
+                    <input class="inps" id="pass" type="password" placeholder="Password" />
                     <div class="ar"></div>
-                    <input class="inps" id="pass" type="password" placeholder="Set password" />
-                    <div class="ar"></div>
-                    <input class="inps" id="vpass" type="password" placeholder="Reenter password" />
-                    <div class="ar"></div>
-                    <div class="cppt">
-                        <label class="container">I agree to the terms and policy
-                            <input type="checkbox" id="terms">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div class="ar"></div>
+                    <!-- Put recapacha here -->
                     <div class="ar"></div>
                     <div class="crr">
                         <button class="cncl">Cancel</button>
-                        <button class="cnt">Continue</button>
+                        <button class="cnt" onclick="submit()">Hop in</button>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="../src/modal.js"></script>
         <script>
-            
+            var allChar=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","@","%","&","$","*","/",":","?","-","_",".",","];
+            function submit(){
+                var error=true;
+                let inputs=document.getElementsByClassName("inps");
+                for(let i=0;i<inputs.length;i++){
+                    if(inputs[i].value==0){
+                        error=true;
+                        inputs[i].style.border="3px solid #ff6f61";
+                    }
+                }
+                if(!error){
+                    for(let i=0;i<inputs.length;i++){
+                        if(inputs[i].value.length>250){
+                            error=true;
+                        }else{
+                            for(let j=0;j<inputs[i].value.length;j++){
+                                if(allChar.indexOf(inputs[i].value[j])==-1){
+                                    error=true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                if(error){
+                    errMessage("Ooopsie...! You made some mistakes in the form");
+                }
+            }
+            function errMessage(msg){
+                if(msg!=""){
+                    document.getElementById("modalText").innerHTML=msg;
+                    openModal();
+                }
+            }
         </script>
     </body>
 </html>
