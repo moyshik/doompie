@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.carrier{
+    width: 100%;
+    padding: 10px;
+}
+.opt{
+    width:100%;
+    border:0px solid red;
+}
+.opt::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.opt a{
+    float: left;
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5EM;
+    color: #ff8080;
+    padding-bottom: 15px;
+}
+.lll{
+    height:5px;
+    width:50%;
+    float:right;
+    background-color: blue;
+    border-radius: 2px;
+    animation-name: fill;
+    animation-duration: 2s;
+}
+.llp{
+    height:5px;
+    width:50%;
+    float:left;
+    background-color: transparent;
+}
+.inps{
+    width:100%;
+    float:left;
+    text-align: left;
+    font-size:1.3EM;
+    padding: 10px;
+    border:3px solid #bfbfbf;
+    background-color: #bfbfbf;
+    color:white;
+    font-weight: 400;
+}
+.inps:hover{
+    color:#bfbfbf;
+    background-color: white;
+}
+.ar{
+    width: 100%;
+    height:25px;
+    float: left;
+}
+.crr{
+    width:100%;
+    float: left;
+}
+.crr button{
+    width:40%;
+    font-size: 1.5EM;
+    overflow: hidden;
+    background-color: #ff6f61;
+    color: white;
+    border:3px solid #ff6f61;
+    font-weight: 600;
+    padding: 10px;
+}
+.crr button:hover{
+    color: #ff6f61;
+    background-color: white;
+}
+.cncl{
+    float: left;
+}
+.cnt{
+    float: right;
+}
+@media only screen and (max-width: 250px) {
+    .carrier{
+        width: 100%;
+        padding:10px;
+    }
+    .opt a{
+        font-size: 1EM;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .carrier{
+        width:700px;
+        padding: 20px;
+    }
+    .opt a{
+        font-size: 2EM;
+    }
+}
+@keyframes fill {
+    from {width: 0%;}
+    to {width: 50%;}
+}
