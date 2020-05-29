@@ -1,0 +1,191 @@
+
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                font-family: sans-serif;
+                font-family: 'Balsamiq Sans', cursive;
+            }
+            .carrier{
+                width: 100%;
+                padding: 10px;
+            }
+            .opt{
+                width:100%;
+                border:0px solid red;
+            }
+            .opt::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .opt a{
+                float: left;
+                width: 50%;
+                text-decoration: none;
+                text-align: center;
+                font-weight: 500;
+                font-size: 1.5EM;
+                color: #ff8080;
+                padding-bottom: 15px;
+            }
+            .lll{
+                height:5px;
+                width:50%;
+                float:left;
+                background-color: blue;
+                border-radius: 2px;
+                animation-name: fill;
+                animation-duration: 2s;
+            }
+            .llp{
+                height:5px;
+                width:50%;
+                float:left;
+                background-color: transparent;
+            }
+            .inps{
+                width:100%;
+                float:left;
+                text-align: left;
+                font-size:1.3EM;
+                padding: 10px;
+                border:3px solid #bfbfbf;
+                background-color: #bfbfbf;
+                color:white;
+                font-weight: 400;
+            }
+            .inps:hover{
+                color:#bfbfbf;
+                background-color: white;
+            }
+            .ar{
+                width: 100%;
+                height:25px;
+                float: left;
+            }
+            .crr{
+                width:100%;
+                float: left;
+            }
+            .crr button{
+                width:40%;
+                font-size: 1.5EM;
+                overflow: hidden;
+                background-color: #ff6f61;
+                color: white;
+                border:3px solid #ff6f61;
+                font-weight: 600;
+                padding: 10px;
+            }
+            .crr button:hover{
+                color: #ff6f61;
+                background-color: white;
+            }
+            .cncl{
+                float: left;
+            }
+            .cnt{
+                float: right;
+            }
+            ::placeholder {
+                color: #fce8e8;
+                opacity: 1; /* Firefox */
+            }
+
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: #fce8e8;
+            }
+
+            ::-ms-input-placeholder { /* Microsoft Edge */
+                color: #fce8e8;
+            }
+            @media only screen and (max-width: 250px) {
+                .carrier{
+                    width: 250px;
+                    padding: 20px;
+                }
+                .opt a{
+                    font-size: 1EM;
+                }
+            }
+            @media only screen and (min-width: 700px) {
+                .carrier{
+                    width: 701px;
+                    padding: 20px;
+                }
+                .opt a{
+                    font-size: 2EM;
+                }
+            }
+            @keyframes fill {
+                from {width: 0%;}
+                to {width: 50%;}
+            }
+            .container {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                float: left;
+                width: 100%;
+                text-align: left;
+            }
+            /* Hide the browser's default checkbox */
+            .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            } 
+
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: #eee;
+            }
+
+            /* On mouse-over, add a grey background color */
+            .container:hover input ~ .checkmark {
+                background-color: #ccc;
+            }
+
+            /* When the checkbox is checked, add a blue background */
+            .container input:checked ~ .checkmark {
+                background-color: #2196F3;
+            }
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            /* Show the checkmark when checked */
+            .container input:checked ~ .checkmark:after {
+                display: block;
+            }
+
+            /* Style the checkmark/indicator */
+            .container .checkmark:after {
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
