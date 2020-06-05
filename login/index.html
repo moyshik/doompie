@@ -57,10 +57,13 @@
                     if(inputs[i].value==0){
                         error=true;
                         inputs[i].style.border="3px solid #ff6f61";
+                    }else{
+                    	inputs[i].style.border="3px solid #bfbfbf";
                     }
-                    else{
-                        inputs[i].style.border="3px solid #bfbfbf";
-                    }
+                }
+                if(document.getElementById('pass').value.length<8){
+                	error=true;
+                	document.getElementById('pass').style.border="3px solid #ff6f61"
                 }
                 if(!error){
                     for(let i=0;i<inputs.length;i++){
